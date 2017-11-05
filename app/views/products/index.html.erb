@@ -1,0 +1,58 @@
+
+<p id="notice"><%= notice %></p>
+
+<h1>Best Flowers</h1>
+
+ <%= link_to 'New Product', new_product_path %>
+<div class="container-fluid">
+  <div class="row">
+    <% @products.each do |product| %>
+    <div class="columns">
+      <ul class="product">
+ <li class="header"><%= product.name %></li>
+ <li><%= product.description %></li>
+ <li class="data"><%= image_tag(product.image_url, class: "img-responsive") %></li>
+ <li class="action"><%= link_to 'Show', product %> 
+ <%= link_to 'Edit', edit_product_path(product) %>
+ <%= link_to 'Destroy', product, method: :delete, data:{ confirm: 'Are you sure?' } %></a></li>
+      </ul>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="columns">
+      <ul class="product">
+        <li class="header">Tulip flower</li>
+        <li>The tulip is found in Australia, the Netherlands. </li>
+        <li class="data"><img class="img-responsive" src="/assets/twellp.jpg" alt="twellp1" /></li>
+        <li class="action"><a href="/products/2">Show</a>  <a href="/products/2/edit">Edit</a>
+         <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/products/2">Destroy</a></a></li>
+      </ul>
+</div>
+
+    <div class="columns">
+      <ul class="product">
+        <li class="header">Daffodil Flower</li>
+        <li>The Daffodil of Jerusalem originates in its yellow color, which is derived from the golden sun</li>
+        <li class="data"><img class="img-responsive" src="/assets/flower.jpg" alt="Classicbike" /></li>
+        <li class="action"><a href="/products/3">Show</a>  <a href="/products/3/edit">Edit</a>
+         <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/products/3">Destroy</a></a></li>
+      </ul>
+</div>
+
+    <div class="columns">
+      <ul class="product">
+        <li class="header">Jasmine Flowers</li>
+        <li>The jasmine flower is home to ancient Egypt, used by ancient pharaohs to cleanse the wounds</li>
+        <li class="data"><img class="img-responsive" src="/assets/1ff.jpg" alt="Roadbike1" /></li>
+        <li class="action"><a href="/products/1">Show</a>  <a href="/products/1/edit">Edit</a>
+         <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/products/1">Destroy</a></a></li>
+      </ul>
+</div>
+    <% end %>
+  </div>
+</div>
+  
+<br>
+
+
