@@ -84,14 +84,14 @@ h1{
 }
 
 body {
+
     font-family: 'Lato', sans-serif;
     color: #00000;
     background: #eeeeee;
     padding:60px 0;
     margin-bottom: 60px;
     position: relative;
-  height: auto;
-  min-height: 100%;
+  padding-bottom: 100px
 
 }
 
@@ -101,7 +101,7 @@ a {
     color: black;
 }
 
-p > a:hover{
+a:hover{
     color: #bcb1f7;
     text-decoration: underline;
 }
@@ -180,7 +180,6 @@ h3 {
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 1rem;
   text-align: center;
   background-color: #3a3737;
 }
