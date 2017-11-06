@@ -7,7 +7,7 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 h1{
 	padding-bottom: 20px;
-	text-align: center;
+	text-align: left;
 	color: black;
 }
 
@@ -106,17 +106,9 @@ p > a:hover{
     text-decoration: underline;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin:  1% 0 1% 0;
-}
 
 h1 {
-  text-align: center;
+  text-align: left;
 }
 
 ._12 {
@@ -275,5 +267,19 @@ ul.social-icons{
     margin: 0 auto;
 }
 
+.h1{ text-align: left;
+}
+
+.contain {
+max-width:1196px;
+text-align:center;
+}
+
+.category {
+position:relative;
+display: inline-block;
+padding:8px;
+
+}
 
 
