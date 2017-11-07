@@ -62,9 +62,15 @@ def create
 end
 
 
-def product_params
-  params.require(:product).permit(:name, :description, :image_url, :colour)
+def show
 end
+
+def index
+  @products = Product.all
+  @test_variable = 42
+
+end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

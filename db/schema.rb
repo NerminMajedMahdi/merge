@@ -12,6 +12,12 @@
 
 ActiveRecord::Schema.define(version: 20171106170916) do
 
+  create_table "orders", force: :cascade do |t|
+    t.integer "product_id"
+    t.float "total"
+    t.index ["product_id"], name: "index_orders_on_product_id"
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.text "description"

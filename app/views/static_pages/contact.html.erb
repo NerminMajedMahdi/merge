@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-xs-12 col-md-6">
+    <h3><span class="glyphicon glyphicon-envelope"></span> Email: <a href="mailto:jmegallen@gmail.com?Subject=Lets%20talk" target="_top">nero@gmail.com</a></h3>
+    <h3><span class="glyphicon glyphicon-phone-alt"></span> Mobile: +49 9093438</h3>
+    <h3><span class="glyphicon glyphicon-facetime-video"></span> Skype: Nermin M. Mahdi</h3>
+    <h3><span class="glyphicon glyphicon-road"></span> Address:</h3>
+    <h3>Palestine-Gaza strip-gaza 199</h3>
+
+    <div id="map"></div>
+  </div>
+  <h1>Contact Us</h1>
+
+  <%= form_tag("/static_pages/thank_you") do %>
+  <div class="col-xs-12 col-md-6">
+    <div class="form-group" id="contactform">
+      <div class="row">
+        <h3><%= label_tag :name, nil %></h3>
+        <%= text_field_tag :name, nil, class:"form-control", placeholder:"Your name..", type:"text", required: "True" %>
+        <h3><%= label_tag :phone, nil %></h3>
+        <%= text_field_tag :phone, nil, class:"form-control", placeholder:"Your telephone..", type:"text", required: "True" %>
+        <h3><%= label_tag :email, nil %></h3>
+        <%= text_field_tag :email, nil, class:"form-control", placeholder:"Your email..", type:"text", required: "True" %>
+        <h3><%= label_tag :message, nil %></h3>
+        <%= text_area_tag :message, nil, class:"form-control", placeholder:"Your message..", id:"message-box", type:"text", rows:"5", required: "True" %> 
+      </div>
+      <div class="row">
+        <%= submit_tag "Submit", class:"btn btn-default", id:"subbut", type:"submit" %>
+      </div>  
+    </div>
+  </div>
+  <% end %>
+</div>
