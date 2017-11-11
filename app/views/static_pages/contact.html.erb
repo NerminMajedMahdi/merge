@@ -1,26 +1,23 @@
+<h1>Contact Us</h1>
 
+<%= flash[:notice] %>
 
-
-    <div class="container">
-     <h1>Contact Us</h1>
-  <%= form_tag("/static_pages/thank_you") do %>
-  <div class="col-xs-12 col-md-6">
-    <div class="form-group" id="contactform">
-      <div class="row">
-        <h3><%= label_tag :name, nil %></h3>
-        <%= text_field_tag :name, nil, class:"form-control", placeholder:"Your name..", type:"text", required: "True" %>
-        <h3><%= label_tag :phone, nil %></h3>
-        <%= text_field_tag :phone, nil, class:"form-control", placeholder:"Your telephone..", type:"text", required: "True" %>
-        <h3><%= label_tag :email, nil %></h3>
-        <%= text_field_tag :email, nil, class:"form-control", placeholder:"Your email..", type:"text", required: "True" %>
-        <h3><%= label_tag :message, nil %></h3>
-        <%= text_area_tag :message, nil, class:"form-control", placeholder:"Your message..", id:"message-box", type:"text", rows:"5", required: "True" %> 
+<%= form_with(url: "/static_pages/thank_you") do |form| %>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= form.label :name %>
+        <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+      </div>        
+      <div class="form-group">
+        <%= form.label :email, "Email Address" %>
+        <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
       </div>
-      <div class="row">
-        <%= submit_tag "Submit", class:"btn btn-default", id:"subbut", type:"submit" %>
-      </div>  
+      <div class="form-group">
+        <%= form.label :message %>
+        <%= form.text_area :message, class: "form-control", placeholder: "Enter Message" %>
+      </div>        
     </div>
   </div>
-  <% end %>
-</div>
- </div>
+  <%= form.submit "Send" %>   
+<% end %>

@@ -25,3 +25,6 @@ Things you may want to cover:
 # fanona-ruby
 # Nermin-M.-Mahdi
 # nermintask5
+# nermintask5
+# nermintask5.3
+# nermintask5.3

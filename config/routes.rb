@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
 
-  
-resources :products , :orders
+
+ 
+resources :users
+
+resources :orders, only: [:index, :show, :create, :destroy]
+
+resources :products
+
+
+get 'users/index'
 
 get '/static_pages/about'
 
@@ -11,9 +19,14 @@ get 'static_pages/landing_page'
 
 get 'static_pages/index'
 
+get 'static_pages/thank_you'
+
 post 'static_pages/thank_you'
 
 root 'static_pages#landing_page'
 
 end
+
+
+
 
