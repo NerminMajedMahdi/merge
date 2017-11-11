@@ -1,15 +1,11 @@
 Rails.application.routes.draw do
 
 
- 
-resources :users
-
 resources :orders, only: [:index, :show, :create, :destroy]
 
 resources :products
 
 
-get 'users/index'
 
 get '/static_pages/about'
 
