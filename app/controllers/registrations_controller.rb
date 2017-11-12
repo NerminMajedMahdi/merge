@@ -1,12 +1,12 @@
 class RegistrationsController < Devise::RegistrationsController
 
- def create
+ #def create
     
-    super
-    if @user.persisted?
-      UserMailer.welcome_mail(@user).deliver_now
-    end
-  end
+   # super
+   # if @user.persisted?
+    #  UserMailer.welcome_mail(@user).deliver_now
+  #  end
+ # end
 
   def edit
   end
