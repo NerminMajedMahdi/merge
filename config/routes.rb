@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+resources :users
+
+devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }, :controllers => {:registrations => "registrations"}
 
 resources :orders, only: [:index, :show, :create, :destroy]
 
@@ -20,6 +23,7 @@ get 'static_pages/thank_you'
 post 'static_pages/thank_you'
 
 root 'static_pages#landing_page'
+
 
 end
 
