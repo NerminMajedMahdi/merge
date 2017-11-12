@@ -12,15 +12,17 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
+     <%= csrf_meta_tag %>
 
 
 
-<%= csrf_meta_tag %>
  
     
  <div class="container">
 <title> Nermin |Flowers Market</title>
 </div>
+<div id="notice" class="alert alert-warning">A message with a confirmation link has been sent to your email address. Please follow the link to activate your account.</div>
   <nav class="navbar navbar-default">
    
 <img class="nermin" src="/assets/nermin.png" alt="nermin logo">
