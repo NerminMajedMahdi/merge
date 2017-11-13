@@ -1,64 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-<script
- src="https://code.jquery.com/jquery-3.2.1.min.js"integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous">
+<head>
+ <src="https://code.jquery.com/jquery-3.2.1.min.js"integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous">
 </script>
     
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700" rel="stylesheet">
   
      <%= csrf_meta_tag %>
+</head>
+<body>
 
-
-
- 
-    
- <div class="container">
-<title> Nermin |Flowers Market</title>
-</div>
-<div id="notice" class="alert alert-warning">A message with a confirmation link has been sent to your email address. Please follow the link to activate your account.</div>
-  <nav class="navbar navbar-default">
-   
-<img class="nermin" src="/assets/nermin.png" alt="nermin logo">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#navbar-collapse-1">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+        <%= link_to "Nermin |Flowers Market", root_path , class: "navbar-brand" %>
       </div>
 
-      <div class="collapse navbar-collapse" id="navbar-collapse-1">
-        <ul class="nav navbar-nav">
-<li>
-                <%= form_tag(products_path, method: "get", class: "navbar-form navbar-right") do %>
-                    <%= text_field_tag(:q, "", type: "text", class: "form-control", placeholder: "search text") %>
-                    <%= submit_tag("Search", class: "btn btn-primary") %>
-                <% end %>
-</li>  
-                <li class="">
-                  <a href="../">Home</a>
-                </li>
-                 <li><a href="../products/">Products</a></li>            
-                 <li><%= link_to 'About', static_pages_about_path %></li>
-                <li><%= link_to 'Contact', static_pages_contact_path %></li></ul>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
+        <!-- Sign up Log in -->
 
- <ul class="nav navbar-nav navbar-right">
+        <div class="navbar-form navbar-right">
+         <ul class="nav navbar-nav navbar-right">
               <li>
                   </li>
                 <% if user_signed_in? %>
   <li>
   <%= link_to('Logout', destroy_user_session_path, :method => :delete, class:"btn btn-default") %>  </li> 
  <li>
-  <%= link_to('Edit User', edit_user_registration_path, :method => :get, class:"btn btn-default" ) %>        
+  <%= link_to('Edit User', edit_user_registration_path, :method => :get, class:"btn btn-success" ) %>        
   </li>
 <% else %>
   <li>
@@ -68,19 +59,45 @@
   </li>
 <% end %>
             </ul>
-               </div>
-                   </div>
+        </div>
 
 
 
-                    
-     
+        <!-- Search Box -->
+        <%= form_tag(products_path, method: "get", class: "navbar-form navbar-right") do %>
+                    <%= text_field_tag(:q, "", type: "text", class: "form-control", placeholder: "search text") %>
+                    <%= submit_tag("Search", class: "btn btn-primary") %>
+                <% end %>
 
- <body>
 
-<%= yield %>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="">
+                  <a href="../">Home</a>
+                </li>
+          <li class="active"><%= link_to "About", static_pages_about_path %></li>
+           <li><a href="../products/">Products</a></li>            
+                 <li><%= link_to 'About', static_pages_about_path %></li>
+                <li><%= link_to 'Contact', static_pages_contact_path %></li></ul>
+       
+        </ul>
 
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>  
+  
+  <section class="container-fluid minpage">
 
+    <!-- Flash Notice Tags -->
+    <% if notice %>
+      <div id="notice" class="alert alert-warning"><%= notice %></div>
+    <% end %>
+    <% if alert %>
+      <div id="alert" class="alert alert-danger"><%= alert %></div>
+    <% end %>
+
+    <%= yield %>
+  </section>
+  
  <!--Footer Section -->
   <div class="footer-container">
       <h4 class="_14">Follow me on</h4>
@@ -94,6 +111,6 @@
 
   <!--End Footer Section -->
 
+</body>
 
-  </body>
 </html>
