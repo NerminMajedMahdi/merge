@@ -22,8 +22,10 @@ group :production do
 end
 
 gem 'devise'
-gem 'cancancan', '~> 1.10'
-
+gem 'carrierwave'
+gem 'bootstrap-sass'
+gem 'cancancan'
+gem 'better_errors
 
 
 # Use Puma as the app server
