@@ -173,7 +173,6 @@ PLATFORMS
 
 DEPENDENCIES
   actionmailer (~> 5.1.4)
-  activerecord (~> 5.1.4)
   byebug
   cancancan (~> 1.10)
   coffee-rails (~> 4.2)
