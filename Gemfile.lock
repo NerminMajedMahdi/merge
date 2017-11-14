@@ -174,7 +174,7 @@ PLATFORMS
 DEPENDENCIES
   actionmailer (~> 5.1.4)
   byebug
-  cancancan (~> 1.10)
+  cancancan
   coffee-rails (~> 4.2)
   devise
   jbuilder (~> 2.5)
