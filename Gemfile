@@ -46,7 +46,8 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'actionmailer', '~> 5.1.4'
-gem 'activerecord', '~> 5.1.4'
+
+
 
 
 # Use Capistrano for deployment
