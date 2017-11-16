@@ -23,7 +23,7 @@ end
 
 gem 'devise'
 
-gem 'cancan'
+gem 'cancancan', '~> 1.10'
 
 
 
