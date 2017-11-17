@@ -17,9 +17,7 @@ group :development, :test do
  gem 'pg'
 end
 # add PostgreSQL to production 
-group :production do
-	gem 'pg'
-end
+
 
 gem 'devise'
 
