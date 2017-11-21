@@ -21,11 +21,10 @@ group :production do
 	gem 'pg'
 end
 
-gem 'devise'
 
 
 
-
+gem 'puma'
 
 
 # Use Puma as the app server
